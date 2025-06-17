@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int w[3003];
+int v[3003];
+int n;int W;
+
+int dp[3003][3003];
+
+
+
+int rec(int level , int w_left){
+    //pruning
+
+
+    //basecase
+    if(level==n){
+        return 0;
+    }
+    //caching 
+    if(dp[level][w_left]!=-1){
+        return dp[level][w_left];
+    }
+    int ans=0;
+    ans=rec(level+1,w_left);
+    if(w_left>=w[level]){
+        ans=max(rec(level,w_left-w[level])+v[level],ans);   // difference is just of +1 
+    }
+    dp[level][w_left]=ans;
+    return ans;
+
+
+
+}
+
+
+int main(){
+cin>>n;
+for(ll i=0; i<n; i++){
+    cin>>w[i];
+}
+for(ll i=0; i<n; i++){
+    cin>>v[i];
+}
+cin>>W;
+memset(dp,-1,sizeof(dp));
+cout<<rec(0,W)<<endl;
+
+
+}
