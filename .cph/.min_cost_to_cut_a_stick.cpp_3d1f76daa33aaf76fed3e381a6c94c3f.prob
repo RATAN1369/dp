@@ -1,0 +1,1 @@
+{"name":"Local: min_cost_to_cut_a_stick","url":"c:\\Users\\ratan\\OneDrive\\Desktop\\dp\\min_cost_to_cut_a_stick.cpp","tests":[{"id":1750437556869,"input":"7\n4\n1 3 4 5","output":"16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ratan\\OneDrive\\Desktop\\dp\\min_cost_to_cut_a_stick.cpp","group":"local","local":true}
