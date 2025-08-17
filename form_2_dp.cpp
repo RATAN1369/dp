@@ -6,6 +6,12 @@ int arr[100100];
 int dp[100100];
 //LIS 
 //TC->O(n^2)
+//to find number of LIS 
+//use a count array 
+//cnt[i]
+//if(rec(i)+1>ans){
+//if it is of same lengh then cnt[level]+=cnt[prev]
+
 
 int rec(int level){
   //prunnig 
@@ -43,6 +49,7 @@ int sol=0;
 for(int i=0; i<n; i++){
     sol=max(sol,rec(i));
 }
+
 
 
 
